@@ -40,7 +40,7 @@ compile_stylus = (project_path, filename, settings, callback) ->
   content = fs.readFileSync filename, 'utf8'
   result = ''
   stylus(content, compress: settings["stylus"]["compress"])
-    .include(project_path)
+    .include(path.dirname(filename))
     .render((err, css) -> 
       throw err if err
       result = css

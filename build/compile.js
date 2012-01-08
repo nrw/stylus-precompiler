@@ -57,7 +57,7 @@ compile_stylus = function(project_path, filename, settings, callback) {
   result = '';
   stylus(content, {
     compress: settings["stylus"]["compress"]
-  }).include(project_path).render(function(err, css) {
+  }).include(path.dirname(filename)).render(function(err, css) {
     if (err) {
       throw err;
     }
