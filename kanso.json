@@ -1,0 +1,10 @@
+{
+    "name": "stylus-precompiler",
+    "version": "0.22.1",
+    "categories": ["build-tools"],
+    "description": "Precompiles .styl CSS templates when building a package and attaches a compiled .css file to reduce parsing time in the browser",
+    "preprocessors": {
+        "compile": "build/compile",
+        "remove": "build/remove"
+    }
+}
