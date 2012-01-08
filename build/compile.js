@@ -44,7 +44,7 @@ compile_attachment = function(doc, path, settings, filename, callback) {
       return callback(err);
     }
     doc._attachments[name] = {
-      content_type: "application/javascript",
+      content_type: "text/css",
       data: new Buffer(js).toString("base64")
     };
     return callback();

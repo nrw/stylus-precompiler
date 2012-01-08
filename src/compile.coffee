@@ -31,7 +31,7 @@ compile_attachment = (doc, path, settings, filename, callback) ->
   compile_stylus path, filename, settings, (err, js) ->
     return callback(err)  if err
     doc._attachments[name] = 
-      content_type: "application/javascript"
+      content_type: "text/css"
       data: new Buffer(js).toString("base64")
     callback()
 
