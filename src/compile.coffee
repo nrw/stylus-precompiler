@@ -28,11 +28,9 @@ compile_attachments = (doc, path, settings, paths, callback) ->
 
 compile_attachment = (doc, path, settings, filename, callback) ->
   name = utils.relpath(filename, path).replace(/\.styl$/, ".css")
-  compile_stylus path, filename, settings, (err, js) ->
+  compile_stylus path, filename, settings, (err, css) ->
     return callback(err)  if err
-    doc._attachments[name] = 
-      content_type: "text/css"
-      data: new Buffer(js).toString("base64")
+    attachments.add(doc, name, name, new Buffer(css).toString("base64"))
     callback()
 
 compile_stylus = (project_path, filename, settings, callback) ->

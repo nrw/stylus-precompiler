@@ -39,14 +39,11 @@ compile_attachments = function(doc, path, settings, paths, callback) {
 compile_attachment = function(doc, path, settings, filename, callback) {
   var name;
   name = utils.relpath(filename, path).replace(/\.styl$/, ".css");
-  return compile_stylus(path, filename, settings, function(err, js) {
+  return compile_stylus(path, filename, settings, function(err, css) {
     if (err) {
       return callback(err);
     }
-    doc._attachments[name] = {
-      content_type: "text/css",
-      data: new Buffer(js).toString("base64")
-    };
+    attachments.add(doc, name, name, new Buffer(css).toString("base64"));
     return callback();
   });
 };
