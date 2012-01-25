@@ -3,6 +3,7 @@ utils = require("kanso-utils/utils")
 spawn = require("child_process").spawn
 path = require("path")
 modules = require("kanso-utils/modules")
+attachments = require("kanso-utils/attachments")
 stylus = require('stylus')
 
 module.exports =

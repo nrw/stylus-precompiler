@@ -1,9 +1,10 @@
-var async, compile_attachment, compile_attachments, compile_stylus, modules, path, spawn, stylus, utils;
+var async, attachments, compile_attachment, compile_attachments, compile_stylus, modules, path, spawn, stylus, utils;
 async = require("async");
 utils = require("kanso-utils/utils");
 spawn = require("child_process").spawn;
 path = require("path");
 modules = require("kanso-utils/modules");
+attachments = require("kanso-utils/attachments");
 stylus = require('stylus');
 module.exports = {
   run: function(root, path, settings, doc, callback) {
