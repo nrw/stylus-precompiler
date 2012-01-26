@@ -44,7 +44,7 @@ compile_attachment = function(doc, path, settings, filename, callback) {
     if (err) {
       return callback(err);
     }
-    attachments.add(doc, name, name, new Buffer(css).toString("base64"));
+    attachments.add(doc, name, name, css);
     return callback();
   });
 };
