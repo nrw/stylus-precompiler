@@ -1,7 +1,7 @@
 # stylus-precompiler
 
 The stylus-precompiler allows you to author your stylesheets with the CSS superset of
-[Stylus](http://learnboost.github.com/stylus/). It supports variables, mixins, and lots of other really useful stuff. The `.styl` files will get compiled and \_attached to your 
+[Stylus](http://learnboost.github.com/stylus/). It supports variables, mixins, and lots of other really useful stuff. The `.styl` and `.stylus` files will get compiled and \_attached to your 
 couchapp on every build and can even be compressed.
 
 
@@ -55,11 +55,11 @@ To enable compression of the output, add the `compress` flag and set it to `true
 ```
 
 
-### Removing original .styl files
+### Removing original .styl and .stylus files
 
 You can also remove any .styl files from attachments (if you placed them inside a
 directory also added as static files), by adding the `remove_from_attachments`
-property. This will remove all attachment with a `.styl` extension!
+property. This will remove all attachment with `.styl` and `.stylus` extensions!
 
 ```javascript
   ...

@@ -1,8 +1,8 @@
 {
     "name": "stylus-precompiler",
-    "version": "0.22.6",
+    "version": "0.22.6-kanso.1",
     "categories": ["build-tools"],
-    "description": "Precompiles .styl CSS templates when building a package and attaches a compiled .css file to reduce parsing time in the browser",
+    "description": "Compiles Stylus files and attaches the compiled CSS on each push",
     "preprocessors": {
         "compile": "build/compile",
         "remove": "build/remove"
