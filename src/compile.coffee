@@ -34,7 +34,7 @@ module.exports =
         throw err if err
 
         name = rel.replace(extension_pattern, ".css")
-        precompiler.addAttachment(doc, name, filename, css)
+        precompiler.addAttachment(doc, name, name, css)
         callback(null, doc)
 
     # Extract the attachment paths from the settings
