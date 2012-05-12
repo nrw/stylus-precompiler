@@ -4,7 +4,7 @@
   module.exports = {
     before: "modules",
     run: function(root, path, settings, doc, callback) {
-      var async, attachments, attachmentsPaths, compileAttachment, extension_pattern, file_pattern, precompiler, processAttachments, stylus, utils, _ref;
+      var async, attachments, attachmentsPaths, compileAttachment, dirname, extension_pattern, file_pattern, precompiler, processAttachments, stylus, utils, _ref;
       attachmentsPaths = (_ref = settings["stylus"]) != null ? _ref["compile"] : void 0;
       if (attachmentsPaths == null) {
         console.log("Stylus precompiler requires a 'compile' setting");
@@ -14,7 +14,7 @@
         attachmentsPaths = [];
       }
       async = require("async");
-      path = require("path");
+      dirname = require("path").dirname;
       utils = require("kanso-utils/utils");
       precompiler = require("kanso-precompiler-base");
       stylus = require('stylus');
@@ -24,7 +24,7 @@
         var compile_settings, dir, file, rel;
         rel = utils.relpath(filename, path);
         console.log("Compiling attachment " + rel);
-        dir = path.dirname(filename);
+        dir = dirname(filename);
         file = fs.readFileSync(filename, 'utf8');
         compile_settings = {
           compress: settings["stylus"]["compress"]

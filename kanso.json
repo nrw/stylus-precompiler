@@ -1,6 +1,6 @@
 {
     "name": "stylus-precompiler",
-    "version": "0.26.0-kanso.2",
+    "version": "0.26.0-kanso.3",
     "categories": ["build-tools"],
     "description": "Compiles Stylus files and attaches the compiled CSS on each push",
     "preprocessors": {

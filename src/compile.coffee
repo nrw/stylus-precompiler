@@ -12,7 +12,7 @@ module.exports =
 
     # Grab required libraries
     async = require("async")
-    path = require("path")
+    dirname = require("path").dirname
     utils = require("kanso-utils/utils")
     precompiler = require("kanso-precompiler-base")
     stylus = require('stylus')
@@ -26,7 +26,7 @@ module.exports =
       rel = utils.relpath(filename, path)
       console.log("Compiling attachment #{rel}")
 
-      dir = path.dirname(filename)
+      dir = dirname(filename)
       file = fs.readFileSync(filename, 'utf8')
       compile_settings = compress: settings["stylus"]["compress"]
       
